@@ -1,5 +1,5 @@
 {% set name = "hyperspyUI" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c666d44e6330cd535590d00e7a11163d200b286ac99f8686aef8d94d063bf635
+  sha256: 00b87f1f7d190a8f1290841b952bc74cf60a2049e541cde83a075a43cce36869
 
 build:
   number: 0
