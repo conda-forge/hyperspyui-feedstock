@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About hyperspyui
 ================
 
@@ -20,8 +16,15 @@ While the UI tries to create a simple and intuitive interface to HyperSpy, it st
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/hyperspyui-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/hyperspyui-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6217&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hyperspyui-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
