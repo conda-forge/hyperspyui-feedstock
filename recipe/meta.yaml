@@ -44,7 +44,6 @@ test:
 
 app:
   entry: hyperspyui
-  icon: hyperspy128.png
   summary:  "HyperSpyUI"
   type: desk
 

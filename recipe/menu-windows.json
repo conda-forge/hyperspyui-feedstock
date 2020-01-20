@@ -1,11 +1,10 @@
 {
     "menu_name": "Anaconda${PY_VER} ${PLATFORM}",
-    "menu_items":
-    [
-        {
-            "name": "HyperSpyUI",
-            "pywscript": "${PYTHON_SCRIPTS}/hyperspyui.exe",
-            "icon": "${MENU_DIR}/hyperspyui.ico"
-        },
+    "menu_items":[
+	{
+		"name": "HyperSpyUI",
+		"pywscript": "${PYTHON_SCRIPTS}/hyperspyui-script.py",
+		"icon": "${MENU_DIR}/hyperspyui.ico"
+	}
     ]
 }
