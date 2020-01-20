@@ -10,19 +10,17 @@ source:
   sha256: 00b87f1f7d190a8f1290841b952bc74cf60a2049e541cde83a075a43cce36869
 
 build:
-  number: 0
-  noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  number: 1
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
+  skip: true  # [py2k]
 
 requirements:
   host:
-    - python >=3.5
+    - python
     - pip
-
   run:
-    - python >=3.5
+    - python
     - hyperspy-gui-traitsui
     - pyqode.python
     - autopep8
