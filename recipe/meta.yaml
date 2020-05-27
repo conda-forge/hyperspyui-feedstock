@@ -1,16 +1,16 @@
 {% set name = "hyperspyUI" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 00b87f1f7d190a8f1290841b952bc74cf60a2049e541cde83a075a43cce36869
+  sha256: 682841cb8cf3dc84b924f3061960b95a8c89ccb07fd8a4ddf73177761d35df90
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
   skip: true  # [py2k]
@@ -44,19 +44,16 @@ test:
 
 app:
   entry: hyperspyui
-  summary:  "HyperSpyUI"
+  summary: HyperSpyUI
   type: desk
 
 about:
   home: https://github.com/hyperspy/hyperspyUI
   license: GNU General Public v3 (GPLv3)
   license_family: GPL3
-  summary: "HyperSpyUI tries to bring a streamlined user interface to the powerful multi-dimensional analysis capabilities of HyperSpy. HyperSpy is an open source Python library which provides tools to facilitate data analysis of multidimensional datasets.
-
-HyperSpy aims at making it easy and natural to apply analytical procedures that operate on an individual signal to multidimensional arrays, as well as providing easy access to analytical tools that exploit the multidimensionality of the dataset.
-
-While the UI tries to create a simple and intuitive interface to HyperSpy, it still retains the raw power of HyperSpy via the UI’s built in IPython console, which runs on the same Python kernel as the UI.
-"
+  summary: "HyperSpyUI tries to bring a streamlined user interface to the powerful multi-dimensional analysis capabilities of HyperSpy. HyperSpy is an open source Python library which provides tools to facilitate data analysis of multidimensional datasets.\nHyperSpy aims at making it easy and natural to apply analytical\
+    \ procedures that operate on an individual signal to multidimensional arrays, as well as providing easy access to analytical tools that exploit the multidimensionality of the dataset.\nWhile the UI tries to create a simple and intuitive interface to HyperSpy, it still retains the raw power of HyperSpy via the UI’s built\
+    \ in IPython console, which runs on the same Python kernel as the UI. "
   license_file: COPYING.txt
   doc_url: http://hyperspy.org/hyperspyUI/
   dev_url: https://github.com/hyperspy/hyperspyUI
