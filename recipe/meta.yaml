@@ -28,6 +28,7 @@ requirements:
     - qtconsole
     - qtpy
     - ffmpeg
+    - ipykernel >=5.2.0
 
 test:
   imports:
