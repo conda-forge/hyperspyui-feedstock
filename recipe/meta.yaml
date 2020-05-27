@@ -50,8 +50,8 @@ app:
 
 about:
   home: https://github.com/hyperspy/hyperspyUI
-  license: GNU General Public v3 (GPLv3)
-  license_family: GPL3
+  license: GPL-3.0-or-later
+
   summary: "HyperSpyUI tries to bring a streamlined user interface to the powerful multi-dimensional analysis capabilities of HyperSpy. HyperSpy is an open source Python library which provides tools to facilitate data analysis of multidimensional datasets.\nHyperSpy aims at making it easy and natural to apply analytical\
     \ procedures that operate on an individual signal to multidimensional arrays, as well as providing easy access to analytical tools that exploit the multidimensionality of the dataset.\nWhile the UI tries to create a simple and intuitive interface to HyperSpy, it still retains the raw power of HyperSpy via the UI’s built\
     \ in IPython console, which runs on the same Python kernel as the UI. "
