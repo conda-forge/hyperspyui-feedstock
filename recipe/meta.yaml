@@ -21,6 +21,7 @@ requirements:
     - pip
   run:
     - python
+    - hyperspy-base
     - hyperspy-gui-traitsui
     - pyqode.python
     - autopep8
