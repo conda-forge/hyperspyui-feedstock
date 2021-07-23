@@ -30,6 +30,8 @@ requirements:
     - qtpy
     - ffmpeg
     - ipykernel >=5.2.0
+  run_constrained:
+    - menuinst >=1.4.17
 
 test:
   imports:
