@@ -10,7 +10,7 @@ source:
   sha256: f8b8f219e77176be32feebacca15960cc895ac7d516feae3367420cb9faa701e
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
   skip: true  # [py2k]
@@ -30,6 +30,8 @@ requirements:
     - qtpy
     - ffmpeg
     - ipykernel >=5.2.0
+  run_constrained:
+    - menuinst >=1.4.17
 
 test:
   imports:
