@@ -1,5 +1,5 @@
 {% set name = "hyperspyUI" %}
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f8b8f219e77176be32feebacca15960cc895ac7d516feae3367420cb9faa701e
+  sha256: 7e47f4d403509f48423c95a7f8230bb6a74561b2f7ae7e379f0881703aaa7ca1
 
 build:
-  number: 3
+  number: 0
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
   skip: true  # [py2k]
