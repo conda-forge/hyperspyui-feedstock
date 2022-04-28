@@ -13,14 +13,13 @@ build:
   number: 0
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
-  skip: true  # [py2k]
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
+    - python >=3.7
     - hyperspy-base
     - hyperspy-gui-traitsui
     - pyqode.python
