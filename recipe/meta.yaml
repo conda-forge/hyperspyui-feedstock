@@ -11,18 +11,17 @@ source:
 
 build:
   number: 0
+  noarch: python
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
+    - __{{ target_os }}
+    - python >=3.7
     - hyperspy-base
     - hyperspy-gui-traitsui
     - pyqode.python
@@ -33,7 +32,7 @@ requirements:
     - ffmpeg
     - ipykernel >=5.2.0
   run_constrained:
-    - menuinst >=1.4.17
+    - menuinst >=1.4.17   # [win]
 
 test:
   imports:
