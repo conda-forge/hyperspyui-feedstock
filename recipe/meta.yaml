@@ -10,7 +10,7 @@ source:
   sha256: 8a21f7437d54745c07b21b9a4ce25f1fd11e42a9d193572a1e9869427c050662
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
