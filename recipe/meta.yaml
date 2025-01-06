@@ -29,7 +29,7 @@ requirements:
     - pyqode.python >=4.0.2
     - pyflakes
     - autopep8
-    - qtconsole >=5.2.0
+    - qtconsole-base >=5.2.0
     - qtpy
     - ffmpeg
     - ipykernel >=5.2.0
