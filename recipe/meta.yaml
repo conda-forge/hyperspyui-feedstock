@@ -10,7 +10,7 @@ source:
   sha256: c976c3f14af319e74c2218bc5cf75c6fbe88a1a989247a4a400eb1513134bfb6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
@@ -19,6 +19,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools
   run:
     - __{{ target_os }}
     - python >=3.8
@@ -29,7 +30,7 @@ requirements:
     - pyqode.python >=4.0.2
     - pyflakes
     - autopep8
-    - qtconsole >=5.2.0
+    - qtconsole-base >=5.2.0
     - qtpy
     - ffmpeg
     - ipykernel >=5.2.0
