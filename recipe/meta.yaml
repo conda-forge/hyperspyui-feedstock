@@ -19,6 +19,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools
   run:
     - __{{ target_os }}
     - python >=3.8
