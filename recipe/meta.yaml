@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hyperspyui-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hyperspyui-{{ version }}.tar.gz
   sha256: c976c3f14af319e74c2218bc5cf75c6fbe88a1a989247a4a400eb1513134bfb6
 
 build:
-  number: 1
+  number: 2
   noarch: python
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
     - __{{ target_os }}
-    - python >=3.8
+    - python >={{ python_min }}
     - exspy
     - hyperspy-base >=2.0
     - hyperspy-gui-traitsui >=2.0
@@ -39,6 +39,8 @@ requirements:
     - menuinst >=1.4.17   # [win]
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - hyperspyui
     - hyperspyui.__main__
