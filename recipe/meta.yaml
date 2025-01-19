@@ -10,7 +10,7 @@ source:
   sha256: 400dc0f7e53e7849811b8472e74978099503f0ed0ce5f0f77314729c7deb0f28
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - mkdir -p "{{ PREFIX }}/Menu"
