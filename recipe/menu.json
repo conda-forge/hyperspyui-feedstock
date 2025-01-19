@@ -22,13 +22,13 @@
                         "{{ PREFIX }}",
                         "{{ PYTHONW }}",
                         "{{ SCRIPTS_DIR }}/hyperspyui-script.py"
-                      ],
+                      ]
                 },
                 "linux": {
                     "Categories": [
                         "Graphics",
                         "Science"
-                    ],
+                    ]
                 },
                 "osx": {}
             }
