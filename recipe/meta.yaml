@@ -59,6 +59,8 @@ test:
     - test -f ${CONDA_PREFIX}/Menu/hyperspyui_menu.json
     # Check we didn't forget any icons
     - test `ls ${CONDA_PREFIX}/Menu/hyperspyui.*  | wc -l` -eq 3
+    # Check that the json file loads without error to catch json formatting issues
+    - python -c "import json; json.load(open('${CONDA_PREFIX}/Menu/hyperspyui_menu.json'))"
 
   # commands:
   #  - DISPLAY=localhost:1.0 xvfb-run -a bash -c 'hyperspyui -h'
