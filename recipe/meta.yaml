@@ -12,6 +12,13 @@ source:
 build:
   number: 0
   noarch: python
+  script:
+    - mkdir -p "{{ PREFIX }}/Menu"
+    - sed "s/__PKG_VERSION__/{{ version }}/" "{{ RECIPE_DIR }}/menu.json" > "{{ PREFIX }}/Menu/hyperspyui_menu.json"
+    - cp "{{ RECIPE_DIR }}/hyperspyui.icns" "{{ PREFIX }}/Menu/hyperspyui.icns"
+    - cp "{{ RECIPE_DIR }}/hyperspyui.ico" "{{ PREFIX }}/Menu/hyperspyui.ico"
+    - cp "{{ RECIPE_DIR }}/hyperspyui.png" "{{ PREFIX }}/Menu/hyperspyui.png"
+    - {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - hyperspyui = hyperspyui.__main__:main
 
@@ -21,7 +28,6 @@ requirements:
     - pip
     - setuptools
   run:
-    - __{{ target_os }}
     - python >={{ python_min }}
     - exspy
     - hyperspy-base >=2.0
@@ -36,7 +42,7 @@ requirements:
     - ipykernel >=5.2.0
     - traitsui >=5.2.0
   run_constrained:
-    - menuinst >=1.4.17   # [win]
+    - menuinst >=2
 
 test:
   requires:
@@ -44,6 +50,11 @@ test:
   imports:
     - hyperspyui
     - hyperspyui.__main__
+  commands:
+    # Check that the menu is installed
+    - test -f ${CONDA_PREFIX}/Menu/hyperspyui_menu.json
+    # Check we didn't forget any icons
+    - test `ls ${CONDA_PREFIX}/Menu/hyperspyui.*  | wc -l` -eq 3
 
   # commands:
   #  - DISPLAY=localhost:1.0 xvfb-run -a bash -c 'hyperspyui -h'

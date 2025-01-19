@@ -1,0 +1,37 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "https://schemas.conda.io/menuinst-1.schema.json",
+    "menu_name": "HyperSpyUI",
+    "menu_items": [
+        {
+            "name": {
+				"target_environment_is_base": "HyperSpyUI (__PKG_VERSION__)",
+				"target_environment_is_not_base": "HyperSpyUI (__PKG_VERSION__) ({{ ENV_NAME }})"
+			  },
+            "description": "A graphical user interface to HyperSpy",
+            "icon": "{{ MENU_DIR }}/hyperspyui.{{ ICON_EXT }}",
+            "command": ["{{ PYTHON }}", "-m", "hyperspyui"],
+            "activate": true,
+            "terminal": false,
+            "platforms": {
+                "win": {
+                    "desktop": true,
+                    "command": [
+                        "{{ BASE_PYTHONW }}",
+                        "{{ BASE_PREFIX }}/cwp.py",
+                        "{{ PREFIX }}",
+                        "{{ PYTHONW }}",
+                        "{{ SCRIPTS_DIR }}/hyperspyui-script.py"
+                      ],
+                },
+                "linux": {
+                    "Categories": [
+                        "Graphics",
+                        "Science"
+                    ],
+                },
+                "osx": {}
+            }
+        }
+    ]
+}
