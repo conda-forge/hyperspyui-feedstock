@@ -15,14 +15,7 @@
             "terminal": false,
             "platforms": {
                 "win": {
-                    "desktop": true,
-                    "command": [
-                        "{{ BASE_PYTHONW }}",
-                        "{{ BASE_PREFIX }}/cwp.py",
-                        "{{ PREFIX }}",
-                        "{{ PYTHONW }}",
-                        "{{ SCRIPTS_DIR }}/hyperspyui-script.py"
-                      ]
+                    "desktop": true
                 },
                 "linux": {
                     "Categories": [
