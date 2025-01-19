@@ -34,6 +34,10 @@ requirements:
     - hyperspy-gui-traitsui >=2.0
     - pyqode.core >=4.0.10
     - pyqode.python >=4.0.2
+    # Select pyqt binding since pyside6 is not supported
+    # Add variant when pyside6 will be supported
+    - pyqt
+    - pyqtwebengine
     - pyflakes
     - autopep8
     - qtconsole-base >=5.2.0
